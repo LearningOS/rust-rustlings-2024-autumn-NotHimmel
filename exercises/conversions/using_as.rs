@@ -10,11 +10,14 @@
 // Execute `rustlings hint using_as` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+// I AM 
 
 fn average(values: &[f64]) -> f64 {
+    if values.is_empty() {
+        return 0.0;
+    }
     let total = values.iter().sum::<f64>();
-    total / values.len()
+    total / values.len() as f64
 }
 
 fn main() {
@@ -31,3 +34,4 @@ mod tests {
         assert_eq!(average(&[3.5, 0.3, 13.0, 11.7]), 7.125);
     }
 }
+
